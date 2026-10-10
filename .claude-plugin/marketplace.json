@@ -1,0 +1,15 @@
+{
+  "name": "skryvo",
+  "description": "Skryvo's plugin for Claude Code: write, schedule and measure social posts in your brand's voice.",
+  "owner": {
+    "name": "Skryvo",
+    "email": "support@skryvo.ai"
+  },
+  "plugins": [
+    {
+      "name": "skryvo",
+      "source": "./",
+      "description": "Write posts in your brand's voice, schedule them to your connected social accounts, and read how they performed."
+    }
+  ]
+}

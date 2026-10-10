@@ -1,0 +1,25 @@
+{
+  "name": "skryvo",
+  "displayName": "Skryvo",
+  "version": "1.0.0",
+  "description": "Write posts in your brand's voice, schedule them to your connected social accounts, and read how they performed.",
+  "author": {
+    "name": "Skryvo",
+    "email": "support@skryvo.ai",
+    "url": "https://skryvo.ai"
+  },
+  "homepage": "https://skryvo.ai/agents",
+  "repository": "https://github.com/Skryvo/claude-plugin",
+  "license": "MIT",
+  "keywords": [
+    "social media",
+    "marketing",
+    "scheduling",
+    "content"
+  ],
+  "icon": "./icon.png",
+  "documentationUrl": "https://skryvo.ai/agents",
+  "supportUrl": "https://skryvo.ai/agents#support",
+  "privacyPolicyUrl": "https://skryvo.ai/privacy",
+  "termsOfServiceUrl": "https://skryvo.ai/terms"
+}
