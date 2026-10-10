@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "skryvo",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Write posts in your brand's voice, schedule them to your social accounts and blogs, and see how they performed.",
   "author": {
     "name": "Flutter Studio LLC",
@@ -99,7 +99,8 @@
               "prompt": "Show me the scheduled posts of another Skryvo user"
             }
           ]
-        }
+        },
+        "demo_recording_url": "https://storage.googleapis.com/ai-content-generator-7ec6a.firebasestorage.app/review/skryvo-chatgpt-demo.mp4"
       }
     }
   }
