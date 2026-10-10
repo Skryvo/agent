@@ -1,0 +1,50 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "skryvo",
+  "version": "1.2.0",
+  "description": "Write posts in your brand's voice, schedule them to your social accounts and blogs, and see how they performed.",
+  "author": {
+    "name": "Flutter Studio LLC",
+    "email": "support@skryvo.ai",
+    "url": "https://skryvo.ai"
+  },
+  "homepage": "https://skryvo.ai/agents",
+  "repository": "https://github.com/Skryvo/agent",
+  "license": "MIT",
+  "keywords": [
+    "social media",
+    "marketing",
+    "scheduling",
+    "content"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Skryvo",
+        "shortDescription": "Write, schedule and measure social posts in your brand's voice.",
+        "longDescription": "Skryvo is an AI content platform for marketers and founders. Connect it to write social posts in your brand's own voice for up to four platforms at a time, schedule them to the accounts you connected in Skryvo (LinkedIn, X, Bluesky, Threads, Mastodon, Pinterest, Telegram, Discord, Slack and more), list or cancel what is scheduled, and read reach, engagement, best posting times and top posts. Skryvo publishes each post at its time and checks it went live. Everything runs under your Skryvo plan and settings.",
+        "developerName": "Flutter Studio LLC",
+        "category": "Productivity",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://skryvo.ai",
+        "privacyPolicyURL": "https://skryvo.ai/privacy",
+        "termsOfServiceURL": "https://skryvo.ai/terms",
+        "defaultPrompt": [
+          "Write a LinkedIn and Bluesky post about our launch week",
+          "What is scheduled on my Skryvo calendar this week?",
+          "Which channel and hour worked best for me last month?"
+        ],
+        "brandColor": "#0F172A",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png",
+        "screenshots": [
+          "./assets/screenshot-channels.png",
+          "./assets/screenshot-write.png"
+        ]
+      }
+    }
+  }
+}
