@@ -18,7 +18,7 @@ the secret `SKRYVO_API_KEY` (or send it as `Authorization: Bearer <key>`).
 | Claude Code | `/plugin marketplace add Skryvo/agent` then `/plugin install skryvo@skryvo` (adds the skill), or `claude mcp add --transport http skryvo https://api.skryvo.ai/mcp` |
 | ChatGPT (and OpenAI dots, which share ChatGPT's plugins) | Plugins › Add › **Add custom MCP server** › paste the link |
 | Codex | `codex mcp add skryvo --url https://api.skryvo.ai/mcp` |
-| Cursor | Cursor Settings › MCP › Add, or add `mcp.json` from this repo to `.cursor/mcp.json` |
+| Cursor (desktop app) | Cursor Settings › Tools & MCP › New MCP server, or add `mcp.json` from this repo to `.cursor/mcp.json` |
 | VS Code (Copilot) | Command Palette › **MCP: Add Server** › HTTP › paste the link |
 | Gemini CLI | `gemini extensions install https://github.com/Skryvo/agent` (or `gemini mcp add --transport http skryvo https://api.skryvo.ai/mcp`) |
 | Gemini web app | Settings › Connected apps › add a custom app with the link |
