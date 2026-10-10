@@ -62,6 +62,6 @@ Free, Hobby, Pro and Enterprise; scheduling starts on Hobby. Limits and prices: 
 ## Privacy
 
 Skryvo receives only the requests your agent makes, never the rest of your conversation. Full policy:
-https://skryvo.ai/privacy. Disconnect apps or revoke keys any time in Skryvo under Settings › API & agents.
+https://skryvo.ai/privacy/. Disconnect apps or revoke keys any time in Skryvo under Settings › API & agents.
 
 Support: support@skryvo.ai
