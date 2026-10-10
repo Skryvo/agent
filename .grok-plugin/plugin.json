@@ -1,0 +1,32 @@
+{
+  "name": "skryvo",
+  "version": "1.1.0",
+  "description": "Write posts in your brand's voice, schedule them to your connected social accounts and blogs, and read how they performed.",
+  "author": {
+    "name": "Skryvo",
+    "email": "support@skryvo.ai",
+    "url": "https://skryvo.ai"
+  },
+  "homepage": "https://skryvo.ai/agents",
+  "repository": "https://github.com/Skryvo/agent",
+  "license": "MIT",
+  "logo": "icon.png",
+  "keywords": [
+    "skryvo",
+    "social media",
+    "scheduling",
+    "content",
+    "marketing",
+    "brand voice"
+  ],
+  "skills": [
+    "./skills/social-publishing"
+  ],
+  "mcpServers": {
+    "skryvo": {
+      "type": "http",
+      "url": "https://api.skryvo.ai/mcp",
+      "note": "Skryvo's hosted MCP server. Signs in with OAuth on first use; no key or install needed."
+    }
+  }
+}

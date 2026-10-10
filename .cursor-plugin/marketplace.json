@@ -1,0 +1,27 @@
+{
+  "name": "skryvo",
+  "owner": {
+    "name": "Skryvo",
+    "email": "support@skryvo.ai"
+  },
+  "metadata": {
+    "description": "Skryvo for AI agents: write, schedule and measure social posts in your brand's voice."
+  },
+  "plugins": [
+    {
+      "name": "skryvo",
+      "source": "./",
+      "version": "1.1.0",
+      "description": "Write posts in your brand's voice, schedule them to your connected social accounts and blogs, and read how they performed.",
+      "homepage": "https://skryvo.ai/agents",
+      "license": "MIT",
+      "logo": "icon.png",
+      "category": "productivity",
+      "tags": [
+        "social-media",
+        "scheduling",
+        "marketing"
+      ]
+    }
+  ]
+}

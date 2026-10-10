@@ -1,0 +1,6 @@
+{
+  "skryvo": {
+    "type": "http",
+    "url": "https://api.skryvo.ai/mcp"
+  }
+}
