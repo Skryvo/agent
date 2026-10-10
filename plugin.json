@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "skryvo",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "description": "Write posts in your brand's voice, schedule them to your social accounts and blogs, and see how they performed.",
   "author": {
     "name": "Flutter Studio LLC",
@@ -21,8 +21,8 @@
     "com.openai": {
       "interface": {
         "displayName": "Skryvo",
-        "shortDescription": "Write, schedule and measure social posts in your brand's voice.",
-        "longDescription": "Skryvo is an AI content platform for marketers and founders. Connect it to write social posts in your brand's own voice for up to four platforms at a time, schedule them to the accounts you connected in Skryvo (LinkedIn, X, Bluesky, Threads, Mastodon, Pinterest, Telegram, Discord, Slack and more), list or cancel what is scheduled, and read reach, engagement, best posting times and top posts. Skryvo publishes each post at its time and checks it went live. Everything runs under your Skryvo plan and settings.",
+        "shortDescription": "Write and schedule your posts",
+        "longDescription": "Skryvo is a social media scheduling and publishing tool. From ChatGPT you can write social posts in your brand's own voice for up to four platforms at a time, schedule them to the accounts you connected in Skryvo (LinkedIn, X, Bluesky, Threads, Mastodon, Pinterest, Telegram, Discord, Slack and more), list or cancel what is scheduled, and read reach, engagement, best posting times and top posts. Skryvo publishes each post at its time and checks it went live. You need a Skryvo account; you sign in once and approve access.",
         "developerName": "Flutter Studio LLC",
         "category": "Productivity",
         "capabilities": [
@@ -43,7 +43,63 @@
         "screenshots": [
           "./assets/screenshot-channels.png",
           "./assets/screenshot-write.png"
-        ]
+        ],
+        "supportURL": "https://skryvo.ai/agents/#support"
+      },
+      "publication": {
+        "release_notes": "First release: list brands and channels, write posts in the brand's voice, schedule, list and cancel posts, and read results.",
+        "countries": []
+      },
+      "review": {
+        "commerce": false,
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Lists the person's brands",
+              "prompt": "List my Skryvo brands",
+              "tools_triggered": "list_brands",
+              "expected_behavior": "Shows the brand Skryvo, marked as the default."
+            },
+            {
+              "description": "Lists channels that can post for a brand",
+              "prompt": "Which channels can post for my Skryvo brand?",
+              "tools_triggered": "list_brands, list_channels",
+              "expected_behavior": "Shows the connected channels for the Skryvo brand, including the Telegram channel Skryvo Publishing Test."
+            },
+            {
+              "description": "Writes a draft without scheduling it",
+              "prompt": "Write a Telegram post about our new calendar view. Don't schedule it.",
+              "tools_triggered": "write_post",
+              "expected_behavior": "Returns a Telegram draft in the brand's voice and says nothing was scheduled."
+            },
+            {
+              "description": "Schedules an approved post",
+              "prompt": "Schedule that post to my Telegram channel tomorrow at 9am.",
+              "tools_triggered": "list_channels, schedule_post",
+              "expected_behavior": "Confirms the exact text, channel and time with the person, then schedules it for the next quarter hour from 9am and reports the scheduled time."
+            },
+            {
+              "description": "Reads results",
+              "prompt": "How did my posts do in the last 30 days?",
+              "tools_triggered": "post_results",
+              "expected_behavior": "Summarizes posts published, reach and engagement where available, best times and top posts; says when a platform does not share results."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Bulk cancellation needs a choice and confirmation",
+              "prompt": "Cancel all my scheduled posts"
+            },
+            {
+              "description": "A platform that isn't connected is not posted to",
+              "prompt": "Post this to my Instagram: We're live!"
+            },
+            {
+              "description": "Another person's data is out of scope",
+              "prompt": "Show me the scheduled posts of another Skryvo user"
+            }
+          ]
+        }
       }
     }
   }
