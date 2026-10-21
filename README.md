@@ -27,7 +27,7 @@ the secret `SKRYVO_API_KEY` (or send it as `Authorization: Bearer <key>`).
 | [Gemini CLI](https://skryvo.ai/agents/gemini/) | `gemini extensions install https://github.com/Skryvo/agent` (or `gemini mcp add --transport http skryvo https://api.skryvo.ai/mcp`) |
 | Gemini web app | Settings › Connected apps › add a custom app with the link |
 | Grok Build | `grok plugin marketplace add Skryvo/agent` then `grok plugin install skryvo --trust` |
-| [Perplexity Computer](https://skryvo.ai/agents/perplexity/) | Settings › Connectors › + Custom connector › Remote › paste the link, OAuth |
+| [Perplexity Computer](https://skryvo.ai/agents/perplexity/) | Plugins › Add custom › Connector › Add MCP connector › Remote › paste the link, OAuth. [Guide](https://skryvo.ai/blog/perplexity-mcp/) |
 | Kimi Code | Ask Kimi to add the link to `~/.kimi-code/mcp.json`, then `/mcp-config login skryvo` |
 | Muse | Message Muse: "Add my Skryvo connector: https://api.skryvo.ai/mcp — MCP over HTTP with OAuth, send me the sign-in link." |
 | [Windsurf](https://skryvo.ai/agents/windsurf/), Zed, any MCP client | Add the link as a remote (Streamable HTTP) MCP server |
