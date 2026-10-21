@@ -23,7 +23,7 @@ the secret `SKRYVO_API_KEY` (or send it as `Authorization: Bearer <key>`).
 | [ChatGPT](https://skryvo.ai/agents/chatgpt/) (and OpenAI dots, which share ChatGPT's plugins) | Plugins › Add › **Add custom MCP server** › paste the link |
 | [Codex](https://skryvo.ai/agents/codex/) | `codex mcp add skryvo --url https://api.skryvo.ai/mcp`, then `codex mcp login skryvo`. [Guide](https://skryvo.ai/blog/codex-mcp/) |
 | [Cursor](https://skryvo.ai/agents/cursor/) (desktop app) | Add `mcp.json` from this repo to `~/.cursor/mcp.json` (or a project's `.cursor/mcp.json`), then switch Skryvo on under Customize. [Guide](https://skryvo.ai/blog/cursor-mcp/) |
-| [VS Code](https://skryvo.ai/agents/vscode/) (Copilot) | Command Palette › **MCP: Add Server** › HTTP › paste the link |
+| [VS Code](https://skryvo.ai/agents/vscode/) (Copilot) | Command Palette › **MCP: Add Server** › HTTP › paste the link, save to the global config (`~/.copilot/mcp-config.json`); or `code --add-mcp '{"name":"skryvo","type":"http","url":"https://api.skryvo.ai/mcp"}'`. [Guide](https://skryvo.ai/blog/vscode-mcp/) |
 | [Gemini CLI](https://skryvo.ai/agents/gemini/) | `gemini extensions install https://github.com/Skryvo/agent` (or `gemini mcp add --transport http skryvo https://api.skryvo.ai/mcp`) |
 | Gemini web app | Settings › Connected apps › add a custom app with the link |
 | Grok Build | `grok plugin marketplace add Skryvo/agent` then `grok plugin install skryvo --trust` |
