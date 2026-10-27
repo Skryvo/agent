@@ -2,6 +2,7 @@
 
 [![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/skryvo/agent)
 [![Skryvo MCP connector](https://glama.ai/mcp/connectors/ai.skryvo/mcp/badges/score.svg)](https://glama.ai/mcp/connectors/ai.skryvo/mcp)
+[![Skryvo on ClaudePluginHub](https://www.claudepluginhub.com/badge/skryvo-skryvo)](https://www.claudepluginhub.com/plugins/skryvo-skryvo)
 
 [Skryvo](https://skryvo.ai) writes social posts and articles in your brand's voice, plans them on one calendar
 and publishes them to your channels. This repo connects it to the AI tool you already use: ask Claude, ChatGPT,
