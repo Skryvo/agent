@@ -2,7 +2,7 @@
 
 Skryvo is a hosted MCP server. There is nothing to clone, build or run locally.
 
-1. The person needs a Skryvo account (free at https://app.skryvo.ai). Ask them to open
+1. The person needs a Skryvo account (7-day trial at https://app.skryvo.ai). Ask them to open
    https://app.skryvo.ai/settings/agents, create an API key and paste it to you. It starts with `sk_skryvo_`.
 2. Add this server to the client's MCP settings, with the key in place of `<key>`:
 

@@ -3,13 +3,14 @@
 [![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/skryvo/agent)
 [![Skryvo MCP connector](https://glama.ai/mcp/connectors/ai.skryvo/mcp/badges/score.svg)](https://glama.ai/mcp/connectors/ai.skryvo/mcp)
 [![Skryvo on ClaudePluginHub](https://www.claudepluginhub.com/badge/skryvo-skryvo)](https://www.claudepluginhub.com/plugins/skryvo-skryvo)
+[![Skryvo for AI agents on AI Agents Listing](https://aiagentslisting.com/skryvo-for-ai-agents/badge.svg?claim=7c86e9e8afe44b63f79e89bd835a07c6)](https://aiagentslisting.com/mcp/skryvo-for-ai-agents)
 
 [Skryvo](https://skryvo.ai) writes social posts and articles in your brand's voice, plans them on one calendar
 and publishes them to your channels. This repo connects it to the AI tool you already use: ask Claude, ChatGPT,
 Cursor or another agent to write a week of posts, check each one, and schedule it. Skryvo shows every post and
 waits for your go-ahead before anything is published.
 
-You need a Skryvo account (free plan: https://app.skryvo.ai) and, to publish, accounts connected under
+You need a Skryvo account (7-day trial: https://app.skryvo.ai) and, to publish, accounts connected under
 Settings › Connected Accounts. Step-by-step setup for each agent: https://skryvo.ai/agents/
 
 **MCP server:** `https://api.skryvo.ai/mcp` — one link for every user and client, not a secret. Clients
@@ -33,7 +34,7 @@ the secret `SKRYVO_API_KEY` (or send it as `Authorization: Bearer <key>`).
 | Gemini web app | Settings › Connected apps › add a custom app with the link |
 | Grok Build | `grok plugin marketplace add Skryvo/agent` then `grok plugin install skryvo --trust` |
 | [Perplexity Computer](https://skryvo.ai/agents/perplexity/) | Plugins › Add custom › Connector › Add MCP connector › Remote › paste the link, OAuth. [Guide](https://skryvo.ai/blog/perplexity-mcp/) |
-| Kimi Code | Ask Kimi to add the link to `~/.kimi-code/mcp.json`, then `/mcp-config login skryvo` |
+| Kimi Code | Run `/mcp-config` and add the link as an HTTP server named `skryvo` (or put `{"mcpServers":{"skryvo":{"url":"https://api.skryvo.ai/mcp"}}}` in `~/.kimi-code/mcp.json`), then `/mcp-config login skryvo` |
 | Muse | Message Muse: "Add my Skryvo connector: https://api.skryvo.ai/mcp — MCP over HTTP with OAuth, send me the sign-in link." |
 | [Windsurf](https://skryvo.ai/agents/windsurf/), Zed, any MCP client | Add the link as a remote (Streamable HTTP) MCP server |
 
@@ -47,14 +48,15 @@ the secret `SKRYVO_API_KEY` (or send it as `Authorization: Bearer <key>`).
 
 ## What it can do
 
-List brands and channels, write a post for up to four platforms (uses your plan's generations), schedule
-and cancel posts, list what is scheduled, and read results. Details: https://skryvo.ai/agents/
+List brands and channels, write a post for up to four platforms (uses your plan's generations), design its
+picture in the brand's look, schedule and cancel posts, list what is scheduled, and read results.
+Details: https://skryvo.ai/agents/
 
 ## Where it publishes
 
-Live: LinkedIn, X, Bluesky, Mastodon, Pinterest, Telegram, Discord, Slack, WordPress, WordPress.com and Dev.to.
-Built and waiting for platform review: LinkedIn Pages, Facebook Pages, Instagram, Threads and TikTok (photo
-posts). What each channel supports and its limits: https://skryvo.ai/channels/
+Live: LinkedIn profiles, X, Bluesky, Mastodon, Pinterest, TikTok, Telegram, Discord, Slack, WordPress (with
+WordPress.com) and Dev.to. Built and waiting for platform review: LinkedIn Pages, Facebook Pages, Instagram,
+Threads, YouTube and Google Business Profile. What each channel supports and its limits: https://skryvo.ai/channels/
 
 Channel guides for agents: [LinkedIn MCP](https://skryvo.ai/mcp/linkedin/), [X MCP](https://skryvo.ai/mcp/x/),
 [WordPress MCP](https://skryvo.ai/mcp/wordpress/), [Discord MCP](https://skryvo.ai/mcp/discord/),
@@ -62,7 +64,8 @@ Channel guides for agents: [LinkedIn MCP](https://skryvo.ai/mcp/linkedin/), [X M
 
 ## Plans
 
-Free, Hobby, Pro and Enterprise; scheduling starts on Hobby. Limits and prices: https://skryvo.ai/pricing/
+A 7-day trial, then Hobby, Pro or Enterprise. Limits and prices: https://skryvo.ai/pricing/
+Free AI tools with no account: https://skryvo.ai/tools/
 
 ## Privacy
 
