@@ -1,0 +1,30 @@
+{
+  "name": "skryvo",
+  "version": "2.0.0",
+  "description": "Write posts, articles, emails, ads and listings in your brand's voice, schedule them to the channels you connect, and see how they performed.",
+  "author": {
+    "name": "Skryvo",
+    "email": "support@skryvo.ai",
+    "url": "https://skryvo.ai"
+  },
+  "homepage": "https://skryvo.ai/agents",
+  "repository": "https://github.com/Skryvo/agent",
+  "license": "MIT",
+  "keywords": [
+    "social media",
+    "marketing",
+    "scheduling",
+    "content"
+  ],
+  "icon": "./icon.png",
+  "privacyPolicyUrl": "https://skryvo.ai/privacy",
+  "skills": [
+    "./skills/social-publishing"
+  ],
+  "mcpServers": {
+    "skryvo": {
+      "type": "http",
+      "url": "https://api.skryvo.ai/mcp"
+    }
+  }
+}
