@@ -5,8 +5,8 @@
 [![Skryvo on ClaudePluginHub](https://www.claudepluginhub.com/badge/skryvo-skryvo)](https://www.claudepluginhub.com/plugins/skryvo-skryvo)
 [![Skryvo for AI agents on AI Agents Listing](https://aiagentslisting.com/skryvo-for-ai-agents/badge.svg?claim=7c86e9e8afe44b63f79e89bd835a07c6)](https://aiagentslisting.com/mcp/skryvo-for-ai-agents)
 
-[Skryvo](https://skryvo.ai) writes social posts and articles in your brand's voice, plans them on one calendar
-and publishes them to your channels. This repo connects it to the AI tool you already use: ask Claude, ChatGPT,
+[Skryvo](https://skryvo.ai) writes social posts, articles, emails, ad copy and listings in your brand's voice, plans
+them on one calendar and publishes them to your channels. This repo connects it to the AI tool you already use: ask Claude, ChatGPT,
 Cursor or another agent to write a week of posts, check each one, and schedule it. Skryvo shows every post and
 waits for your go-ahead before anything is published.
 
@@ -44,19 +44,21 @@ the secret `SKRYVO_API_KEY` (or send it as `Authorization: Bearer <key>`).
 |---|---|
 | Manus, Cue | Add a custom MCP connector: server `https://api.skryvo.ai/mcp`, API key field `Bearer <your key>` |
 | OpenClaw, Hermes Agent, NanoClaw, Paperclip, Grok Bot | `npx skills add Skryvo/agent`, then save `SKRYVO_API_KEY` as the agent's secret |
+| [DeepSeek Harness](https://skryvo.ai/agents/deepseek/) | Copy `skills/skryvo-api` to `~/.agents/skills/` and follow the setup on that page |
 | [Scripts, n8n, Make](https://skryvo.ai/agents/api/) | REST at `https://api.skryvo.ai/api/v1/agent` with `Authorization: Bearer <key>` — see `skills/skryvo-api/SKILL.md` |
 
 ## What it can do
 
-List brands and channels, write a post for up to four platforms (uses your plan's generations), design its
-picture in the brand's look, schedule and cancel posts, list what is scheduled, and read results.
-Details: https://skryvo.ai/agents/
+List brands and channels, plan a calendar, write posts, articles, emails, ad copy and listings, design a post's
+picture in the brand's look, schedule with each channel's own words, thread, poll, comments or the person's own
+video, move, change or cancel a post, approve team posts, and read results. Details: https://skryvo.ai/agents/
+
+Every channel says what it takes through the server (`list_channels`, `list_platforms` or `GET /channels`), so
+a new channel or option works here with no update to this repo.
 
 ## Where it publishes
 
-Live: LinkedIn profiles, X, Bluesky, Mastodon, Pinterest, TikTok, Telegram, Discord, Slack, WordPress (with
-WordPress.com) and Dev.to. Built and waiting for platform review: LinkedIn Pages, Facebook Pages, Instagram,
-Threads, YouTube and Google Business Profile. What each channel supports and its limits: https://skryvo.ai/channels/
+What Skryvo can post to today, what each channel supports and its limits: https://skryvo.ai/channels/
 
 Channel guides for agents: [LinkedIn MCP](https://skryvo.ai/mcp/linkedin/), [X MCP](https://skryvo.ai/mcp/x/),
 [WordPress MCP](https://skryvo.ai/mcp/wordpress/), [Discord MCP](https://skryvo.ai/mcp/discord/),

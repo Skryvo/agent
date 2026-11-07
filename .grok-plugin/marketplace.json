@@ -11,8 +11,8 @@
       "description": "Write posts in your brand's voice, schedule them to your connected social accounts and blogs, and read how they performed.",
       "category": "productivity",
       "source": {
-        "type": "local",
-        "path": "./"
+        "source": "url",
+        "url": "https://github.com/Skryvo/agent.git"
       },
       "homepage": "https://skryvo.ai/agents",
       "keywords": [

@@ -1,0 +1,152 @@
+{
+  "identifier": "skryvo",
+  "name": "Skryvo",
+  "version": "2.0.0",
+  "author": "Skryvo",
+  "authorUrl": "https://skryvo.ai",
+  "homepage": "https://skryvo.ai/agents",
+  "icon": "https://raw.githubusercontent.com/Skryvo/agent/main/icon.png",
+  "cloudEndpoint": "https://api.skryvo.ai/mcp",
+  "description": "Skryvo is an AI content platform for marketers and founders. Connect it to plan a calendar, write social posts, articles, emails, ad copy and product listings in your brand's own voice, schedule them to the accounts and blogs you connected in Skryvo, give each channel its own words, thread, poll or video, move or cancel what is scheduled, approve team posts, and read reach, engagement, best posting times and top posts. Skryvo publishes each post at its time and checks it went live. Everything runs under your Skryvo plan and settings; you sign in once and approve access.",
+  "tags": [
+    "social-media",
+    "marketing",
+    "scheduling",
+    "content",
+    "brand-voice"
+  ],
+  "tools": [
+    {
+      "name": "list_brands",
+      "description": "The person's brands: id, name and whether it is their default."
+    },
+    {
+      "name": "list_channels",
+      "description": "Connected accounts to post to: id, platform, name, which brands use it, social or blog, whether it needs reconnecting, and what it takes (word limit, required media, video limits, thread length, polls, comments, how a link appears, its own post options and what the person must choose)."
+    },
+    {
+      "name": "write_post",
+      "description": "Write a post about `topic` (up to 200 characters; say what matters, e.g. the news, the offer, who it is for) for up to 4 platforms, named by a channel's platform, in the brand's own voice. Pass only what the person said: platforms, tone, language, audience, call_to_action, hashtags, link, and pictures (true for a picture in the brand's look with each post, false for none). When platforms or pictures were left out, the first call writes nothing and returns status confirm: every setting with where it came from (you, brand, brand profile, Skryvo default), the cost in generations and image credits, and what is left this month. Show that as one message, let the person change anything, then call again with their final values and confirmed true. Uses one of the person's generations for the whole batch, plus image credits for pictures. Nothing is scheduled."
+    },
+    {
+      "name": "design_picture",
+      "description": "Design one picture for a post in the brand's kept look (its colours, type, logo and own photos), with a copy sized for each platform. text: the post it goes with; its opening line is set on the picture unless headline (up to nine words) is given. direction: how it should differ, in the person's words, e.g. warmer, closer, bolder or calmer. photo_id: the id of one of the brand's own photos, as its design lists them, to build the picture around; omitted, the brand's freshest photo. Takes about a minute and spends the person's Image Studio credits, one picture's worth for each page shape the platforms need (square or wide). Returns each platform's image_url, width and height, the credits used and left. Nothing is scheduled."
+    },
+    {
+      "name": "post_results",
+      "description": "How published posts did over the last 7, 30 or 90 days: reach, engagement and clicks per channel, the best posting times, what stood out, and the top posts."
+    },
+    {
+      "name": "schedule_post",
+      "description": "Schedule one post to each social channel; Skryvo publishes it and checks it went live. at: ISO 8601 time, moved to the next quarter hour; omitted, about 5 minutes from now. link: a web page the post points to (where a channel's link is a destination it becomes the post's button or the pin's target, elsewhere it follows the words). button: a Google Business Profile button, learn_more, book, order, shop, sign_up or call. tiktok_privacy: PUBLIC_TO_EVERYONE, MUTUAL_FOLLOW_FRIENDS, FOLLOWER_OF_CREATOR or SELF_ONLY, as the person chose. image_url: one picture for every channel; images: {channel_id: image_url} gives a channel its own picture, such as the copy sized for its network. by_channel: {channel_id: ...} gives a channel what is its own: text, image_url, video_id, title, options (as the channel's listing names them), thread (the posts that follow), numbered, poll, comments, tiktok and youtube. A channel takes only what its listing says; anything else is refused and nothing is scheduled."
+    },
+    {
+      "name": "list_scheduled_posts",
+      "description": "Social posts from yesterday to the next `days` days, with status and any publish error. A post with written=false is a planned topic Skryvo writes before its time, not an empty post."
+    },
+    {
+      "name": "cancel_post",
+      "description": "Remove a scheduled post before it goes out."
+    },
+    {
+      "name": "brand_design",
+      "description": "A brand's design as data: logo, colour roles, fonts, the look it keeps (three AI-designed posts every new post is designed in, the changes left and whether it is kept) and what would make its designs better."
+    },
+    {
+      "name": "change_look",
+      "description": "Change a brand's look: design (its first three posts), closer (to its site), bolder, calmer or photo (another photo) design them again, at most twice and free; keep makes the look on show the one every new post wears. A design takes about two minutes; the brand's design shows it once it lands. Ask the person before keep."
+    },
+    {
+      "name": "plan_article",
+      "description": "Plan a blog article about `topic` (3 to 200 characters) in the brand's voice: Skryvo researches it and returns the headline, other headlines, the search phrase it aims at (with its monthly searches, difficulty and whether it is winnable) and other phrases worth aiming at, the outline, its sources and the facts it found in them (each with its source and link), up to three questions only the author can answer, articles the brand already has on it, and the picture plan. Free; uses one of the month's article plans; about a minute. Pass only what the person said: length (words), tone, style (how-to, listicle, comparison, case study, explainer, narrative, opinion, news, review, interview), language, audience and point_of_view; the rest come from the brand's saved defaults. The plan returns status confirm with every setting and where it came from (you, brand, brand profile, Skryvo default), the pictures (cover on or off, 0 to 3 inside, from the brand's defaults), the cost in generations and the most its pictures can use in image credits, and what is left this month. keywords: phrases the person wants to rank for. must_cover: points the article has to make. only_you: facts only the person knows (their numbers, stories, customers). notes: anything else for the writer. sources: up to 3 web pages to read. Show the plan, its settings and its questions as one message and let the person change anything before writing."
+    },
+    {
+      "name": "write_article",
+      "description": "Write the planned article (plan_id from its plan) in the background; it takes about four minutes and is the same article Skryvo writes in the app, researched, fact-checked and scored. headline: the person's chosen headline. answers: [{question, answer}] for the plan's questions, in the person's words. notes: changes the person asked for. pictures: false for no pictures, true for a cover; inside_pictures: 0 to 3 more inside the article; left out, pictures follow the brand's defaults. tone, audience and point_of_view can change here; a new length, style or language needs a new plan. Uses the person's generations (the plan says how many) and Image Studio credits for pictures; a failed article is not charged. Returns article_id; nothing is published."
+    },
+    {
+      "name": "article_status",
+      "description": "Where an article is: writing (with its stage), failed (why, and that it was not charged) or done, with its title, word count, score out of 100, its markdown, every claim the fact check read (verdict, why and source links) and a link that opens it in Skryvo. Check about once a minute while it writes."
+    },
+    {
+      "name": "article_results",
+      "description": "How a published article is doing: every blog and post it went out as, each with its link, reach, engagements and clicks, and, when the person connected Google Search Console, its search clicks, impressions, click rate and average position. Takes the article's id or its generation id."
+    },
+    {
+      "name": "article_seo",
+      "description": "An article's SEO check, free: its score out of 100, the search phrase it aims at, its word count and each issue (keyword missing from the title, no meta description, no links to sources, heading structure, length), the improvements on offer and whether the next one is free (an article's first is; each after costs one generation)."
+    },
+    {
+      "name": "improve_article",
+      "description": "Improve an article and save it as a new version (the earlier one stays in Skryvo's history). goal: seo fixes every issue the SEO check found and adds links to real sources; geo_citations adds an FAQ that cites the article's own sources, so AI answer engines can quote it; accuracy rewrites only the sentences the fact check disputed. Returns the score before and after, each change and what is left. An article's first improvement is free, each after costs one generation; ask the person first. About a minute."
+    },
+    {
+      "name": "repurpose_article",
+      "description": "Turn a finished article into one native post per platform, in the brand's voice, keeping the article's facts. One generation for all of them; how many platforms at once follows the plan. Returns each post's text, ready to schedule; show them to the person first."
+    },
+    {
+      "name": "publish_article",
+      "description": "Schedule a finished article to a blog channel (kind blog); Skryvo publishes it there with its pictures, headings and search fields, and checks it went live. article_id: from writing it, or its generation_id. at: ISO 8601 time, moved to the next quarter hour; omitted, about 5 minutes from now. as_draft: true sends it to the blog now as a draft the person reviews and publishes there, returning its edit link. original_url: where the article first lives (an https address), so a copy on a blog such as Dev.to credits it as the original. Get the person's go-ahead on the article, the blog and the time first."
+    },
+    {
+      "name": "write_email",
+      "description": "Write a marketing email in the brand's voice about `about` (what it promotes or says, and to whom): subject lines, preheader, body in markdown and a call to action. Pass only what the person said: email_type (welcome, promotional, newsletter, follow_up, re_engagement, transactional, announcement), tone, language, audience, call_to_action, length (body words). When email_type was left out, the first call writes nothing and returns status confirm with every setting, where it came from, the cost and what is left; show it as one message, then call again with the person's final values and confirmed true. Uses one generation. Nothing is sent."
+    },
+    {
+      "name": "write_listing",
+      "description": "Write a product listing in the brand's voice, shaped for its marketplace's rules (amazon, shopify, etsy, ebay, walmart, tiktok_shop, google_shopping, woocommerce, saas, landing_page): title, description and feature bullets. product: its name. features: 1 to 10 key features (ask the person when they gave none). Optional: marketplace, tone, audience, language, overview (the seller's own words), price, keywords. When marketplace was left out, the first call writes nothing and returns status confirm with every setting, where it came from, the cost and what is left; show it as one message, then call again with confirmed true. Uses one generation."
+    },
+    {
+      "name": "balance",
+      "description": "What the person's plan still allows this month: generations and image credits left, article plans left, when the trial ends, and how many articles, post batches and post pictures that covers. Check it before a large request."
+    },
+    {
+      "name": "keep_defaults",
+      "description": "Keep the person's choices as the brand's defaults, so later posts or articles use them without being asked. kind: post (platforms, tone, pictures, hashtags, call_to_action) or article (word_count, tone, writing_style, cover_picture, inside_pictures). When a summary lists differs_from_brand, offer once to keep those; call only after the person says yes."
+    },
+    {
+      "name": "list_platforms",
+      "description": "Every channel Skryvo offers, connected or not: its name, social or blog, whether it can be connected today and what it takes. A person connects one in Skryvo under Settings, Connected Accounts."
+    },
+    {
+      "name": "change_post",
+      "description": "Move a scheduled post that has not gone out, change its words, or both. at: ISO 8601 time, moved to the next quarter hour. text: the post's new words on this platform. Replaces what was there, so confirm with the person first."
+    },
+    {
+      "name": "review_post",
+      "description": "Decide a team post waiting for approval, as the person's own decision: approve true lets it go out at its time; approve false sends it back with note saying what should change. Only reviewers, admins and owners can decide."
+    },
+    {
+      "name": "plan_calendar",
+      "description": "Plan a week or a month of social posts for a brand from start_date (YYYY-MM-DD): each row has a date, time, platform, topic and why. topics: what to focus on. platforms: where to post. Uses one generation and one of the month's calendar plans. Adds nothing to the calendar; show it to the person."
+    },
+    {
+      "name": "accept_plan",
+      "description": "Add the rows of a calendar plan the person keeps to the calendar as planned topics, each with its date, time, content_type, topic and platform. Nothing is written or published by this. Free."
+    },
+    {
+      "name": "write_ad",
+      "description": "Write ad copy in the brand's voice, shaped for each ad platform's limits. product: what is advertised. platforms: ad platforms, such as google_ads or meta_ads; a wrong one's refusal names them all. what_it_is, benefits (up to five), link (the landing page) and goal (awareness, consideration or conversion) come from the person. variations: 1 to 6. Uses one generation. No ad is created or run anywhere."
+    },
+    {
+      "name": "find_content",
+      "description": "What this account already made, newest first: id, kind, title, brand and date. kind: article, post, email, listing or ad; omitted, all of them. limit: up to 50."
+    },
+    {
+      "name": "add_brand",
+      "description": "Add a brand and read its voice, kit and facts from its website, the same setup the app runs; it takes a few minutes in the background and the brand then appears with the others. Uses one of the month's voice trainings; plans limit how many brands an account holds. Ask the person first."
+    },
+    {
+      "name": "add_video",
+      "description": "Open an upload for the person's own video file (mp4 or mov, up to 1 GB). name: its file name. size: its bytes. Returns its id and an upload_url that takes the file with an HTTP PUT. Agents that can't send files ask the person to upload it in Skryvo instead. Counts against the plan's video storage."
+    },
+    {
+      "name": "finish_video",
+      "description": "Read a video once its upload ended and make it ready to schedule. Refused, with the reason, when the file can't be read."
+    },
+    {
+      "name": "list_videos",
+      "description": "The person's own finished videos, uploaded here or in Skryvo: id, name and size."
+    }
+  ]
+}
