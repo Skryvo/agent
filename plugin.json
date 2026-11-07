@@ -40,10 +40,6 @@
         "brandColor": "#0F172A",
         "composerIcon": "./assets/icon.png",
         "logo": "./assets/logo.png",
-        "screenshots": [
-          "./assets/screenshot-channels.png",
-          "./assets/screenshot-write.png"
-        ],
         "supportURL": "https://skryvo.ai/agents/#support"
       },
       "publication": {
