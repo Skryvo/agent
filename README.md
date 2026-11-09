@@ -25,7 +25,7 @@ the secret `SKRYVO_API_KEY` (or send it as `Authorization: Bearer <key>`).
 | [Claude](https://skryvo.ai/agents/claude/) (web, desktop, mobile) | Directory: search **Skryvo** in Connectors, or Settings › Connectors › Add custom connector › paste the link |
 | [Claude Cowork](https://skryvo.ai/agents/claude-cowork/) | Cowork › Customize › Connectors › + Add custom connector › paste the link |
 | [Claude Code](https://skryvo.ai/agents/claude-code/) | `/plugin marketplace add Skryvo/agent` then `/plugin install skryvo@skryvo` (adds the skill), or `claude mcp add --transport http skryvo https://api.skryvo.ai/mcp` |
-| [ChatGPT](https://skryvo.ai/agents/chatgpt/) (and OpenAI dots, which share ChatGPT's plugins) | Plugins › Add › **Add custom MCP server** › paste the link |
+| [ChatGPT](https://skryvo.ai/agents/chatgpt/) (and OpenAI dots, which share ChatGPT's plugins) | Plugins › search for **Skryvo** and add it (or Add › **Add custom MCP server** › paste the link) |
 | [Codex](https://skryvo.ai/agents/codex/) | `codex mcp add skryvo --url https://api.skryvo.ai/mcp`, then `codex mcp login skryvo`. [Guide](https://skryvo.ai/blog/codex-mcp/) |
 | [Cursor](https://skryvo.ai/agents/cursor/) (desktop app) | Add `mcp.json` from this repo to `~/.cursor/mcp.json` (or a project's `.cursor/mcp.json`), then switch Skryvo on under Customize. [Guide](https://skryvo.ai/blog/cursor-mcp/) |
 | [VS Code](https://skryvo.ai/agents/vscode/) (Copilot) | Command Palette › **MCP: Add Server** › HTTP › paste the link, save to the global config (`~/.copilot/mcp-config.json`); or `code --add-mcp '{"name":"skryvo","type":"http","url":"https://api.skryvo.ai/mcp"}'`. [Guide](https://skryvo.ai/blog/vscode-mcp/) |
@@ -49,8 +49,8 @@ the secret `SKRYVO_API_KEY` (or send it as `Authorization: Bearer <key>`).
 
 ## What it can do
 
-List brands and channels, plan a calendar, write posts, articles, emails, ad copy and listings, design a post's
-picture in the brand's look, schedule with each channel's own words, thread, poll, comments or the person's own
+List brands and channels, plan a calendar, write posts, articles, emails, ad copy and listings, bring in the
+person's own article, design a post's picture in the brand's look, schedule with each channel's own words, thread, poll, comments or the person's own
 video, move, change or cancel a post, approve team posts, and read results. Details: https://skryvo.ai/agents/
 
 Every channel says what it takes through the server (`list_channels`, `list_platforms` or `GET /channels`), so

@@ -43,7 +43,10 @@ Skryvo and approve access.
   to. It designs one picture in the brand's kept look and returns a copy sized for each platform
   (`image_url`, `width`, `height`), plus the Image Studio credits used and left. It takes about a minute.
 - The picture carries the post's opening line; pass `headline` (up to nine words) for other words, and
-  `direction` for the person's steer, e.g. "warmer" or "bolder".
+  `direction` for what the person wants, in their words, e.g. "warmer" or "bolder". `photo_id` builds it
+  around one of the brand's own photos.
+- Where the person added their own design for that format under the brand, the picture follows its layout and
+  style. Reference images for one piece are chosen in Skryvo under For this piece; don't promise them here.
 - Show every picture before scheduling. If it comes back refused (no credits, or no kept look yet), pass
   the reason on; a brand with no kept look gets one through `brand_design` and `change_look`, with the
   person's yes before `keep`.
@@ -106,8 +109,14 @@ calendar as planned topics. Nothing is written or published by this.
    cites its sources (`geo_citations`) or rewrites only disputed sentences (`accuracy`), saved as a new
    version. The first improvement is free, each after costs one generation: ask first.
 5. `publish_article` to a channel of kind `blog`, only after the person approves the article, the blog and
-   the time; `as_draft: true` sends it there as a draft instead. `repurpose_article` turns it into one post
-   per platform for `schedule_post`. `article_results` shows how it does once published.
+   the time; `as_draft: true` sends it there as a draft instead. An article read from a live address goes to a
+   blog only as a draft or as an update of that post. `repurpose_article` turns it into one post per
+   platform for `schedule_post`. `article_results` shows how it does once published.
+
+The person's own article: `import_article` brings it in from text (markdown or HTML) or a public address,
+free within the plan's monthly limit, once they say it is theirs to publish (`is_mine`). Ask first. Every
+article tool then works on its id. A post the person wrote themselves needs no `write_post`: pass their words
+to `schedule_post` as they are.
 
 To turn a page, release note or transcript into a campaign, pass its address as a `plan_article` source,
 then write, repurpose and schedule as above.

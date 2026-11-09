@@ -1,13 +1,13 @@
 {
   "identifier": "skryvo",
   "name": "Skryvo",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "author": "Skryvo",
   "authorUrl": "https://skryvo.ai",
   "homepage": "https://skryvo.ai/agents",
   "icon": "https://raw.githubusercontent.com/Skryvo/agent/main/icon.png",
   "cloudEndpoint": "https://api.skryvo.ai/mcp",
-  "description": "Skryvo is an AI content platform for marketers and founders. Connect it to plan a calendar, write social posts, articles, emails, ad copy and product listings in your brand's own voice, schedule them to the accounts and blogs you connected in Skryvo, give each channel its own words, thread, poll or video, move or cancel what is scheduled, approve team posts, and read reach, engagement, best posting times and top posts. Skryvo publishes each post at its time and checks it went live. Everything runs under your Skryvo plan and settings; you sign in once and approve access.",
+  "description": "Skryvo is an AI content platform for marketers and founders. Connect it to plan a calendar, write social posts, articles, emails, ad copy and product listings in your brand's own voice, bring in an article you already wrote, schedule them to the accounts and blogs you connected in Skryvo, give each channel its own words, thread, poll or video, move or cancel what is scheduled, approve team posts, and read reach, engagement, best posting times and top posts. Skryvo publishes each post at its time and checks it went live. Everything runs under your Skryvo plan and settings; you sign in once and approve access.",
   "tags": [
     "social-media",
     "marketing",
@@ -30,7 +30,7 @@
     },
     {
       "name": "design_picture",
-      "description": "Design one picture for a post in the brand's kept look (its colours, type, logo and own photos), with a copy sized for each platform. text: the post it goes with; its opening line is set on the picture unless headline (up to nine words) is given. direction: how it should differ, in the person's words, e.g. warmer, closer, bolder or calmer. photo_id: the id of one of the brand's own photos, as its design lists them, to build the picture around; omitted, the brand's freshest photo. Takes about a minute and spends the person's Image Studio credits, one picture's worth for each page shape the platforms need (square or wide). Returns each platform's image_url, width and height, the credits used and left. Nothing is scheduled."
+      "description": "Design one picture for a post in the brand's kept look (its colours, type, logo and own photos), with a copy sized for each platform. If the person added their own design for that format under the brand, the picture follows its layout and style, with its words and logos left out. text: the post it goes with; its opening line is set on the picture unless headline (up to nine words) is given. direction: what the person wants for this picture or how it should differ, in their words, e.g. warmer, closer, bolder or calmer; reference images are added in the app under For this piece. photo_id: the id of one of the brand's own photos, as its design lists them, to build the picture around; omitted, the brand's freshest photo. Takes about a minute and spends the person's Image Studio credits, one picture's worth for each page shape the platforms need (square or wide). Returns each platform's image_url, width and height, the credits used and left. Nothing is scheduled."
     },
     {
       "name": "post_results",
@@ -79,6 +79,10 @@
     {
       "name": "improve_article",
       "description": "Improve an article and save it as a new version (the earlier one stays in Skryvo's history). goal: seo fixes every issue the SEO check found and adds links to real sources; geo_citations adds an FAQ that cites the article's own sources, so AI answer engines can quote it; accuracy rewrites only the sentences the fact check disputed. Returns the score before and after, each change and what is left. An article's first improvement is free, each after costs one generation; ask the person first. About a minute."
+    },
+    {
+      "name": "import_article",
+      "description": "Bring the person's own article in from text or a public address, free, once they say it is theirs to publish."
     },
     {
       "name": "repurpose_article",

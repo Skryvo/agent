@@ -158,6 +158,8 @@ curl -s -H "$AUTH" "$API/articles/ARTICLE_ID"
 curl -s -X POST -H "$AUTH" -H "Content-Type: application/json" "$API/articles/ARTICLE_ID/publish" \
   -d '{"channel_id":"BLOG_CHANNEL_ID","at":"2026-11-03T09:00:00+05:00"}'
 # SEO check, free: {"score","keyword","words","issues":[...],"improvements","next_improvement_free","left"}
+curl -s -X POST -H "$AUTH" -H "Content-Type: application/json" "$API/articles/import" \
+  -d '{"url":"https://example.com/blog/my-post","is_mine":true}'
 curl -s -H "$AUTH" "$API/articles/ARTICLE_ID/seo"
 # Improve, saved as a new version; the first is free, each after costs one generation (ask first):
 curl -s -X POST -H "$AUTH" -H "Content-Type: application/json" "$API/articles/ARTICLE_ID/improve" \
